@@ -1,0 +1,70 @@
+.homepage__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 20px;
+}
+
+.homepage__filtername {
+    display: flex;
+}
+
+.homepage__filtername input {
+    width: 600px;
+    min-width: 320px;
+    height: 45px;
+}
+
+.homepage__btnlupa {
+    width: 100px;
+    border: none;
+    color: #fff;
+    background-color: #F85555;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.homepage__btnlupa:hover {
+    background-color: #ee2727;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+.homepage__filters {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px
+}
+
+.homepage__darkbtn {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 15px;
+    border: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.homepage__darkbtn:hover{
+    transform: scale(1.05);
+    cursor: pointer;  
+}
+
+.homepage__darkbtn.light-mode {
+    background-color: white;
+    color: black;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/*----otra manera de hacer el dark button---*/
+/* .homepage__darkbtn::before{
+content: 'Dark Mode';
+}
+.dark .homepage__darkbtn::before{
+    content: 'Light Mode';
+} */

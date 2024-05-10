@@ -1,0 +1,39 @@
+.prodinfo{
+     min-width: 300px;
+     max-width: 500px;
+     border: 1px solid;
+     padding: 20px;
+     border-radius: 20px;
+}
+.prodinfo__title{
+     padding-left: 20px;
+     margin: 10px 0;
+}
+
+.prodinfo__container{
+     display: flex;
+     justify-content: space-evenly;
+     margin: 10px 0;
+}
+
+.prodinfo__price{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.prodinfo__price span:last-child{
+padding-left: 20px;      
+}
+
+.prodinfo__counter p {
+     margin-bottom: 10px;
+}
+
+.prodinfo__counter span {
+     padding: 3px 10px;
+}
+
+.prodinfo__add{
+     width: 100%;
+}
