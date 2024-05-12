@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
 import useAuth from '../hooks/useAuth'
+import './styles/login.css'
 
 const Login = () => {
 
@@ -35,27 +36,28 @@ const Login = () => {
   }
 
   return (
-    <>
-      {
-        hasToken ?
-          <button onClick={handleLogout}>Logout</button>
-          :
-          <div>
-            <form onSubmit={handleSubmit(submit)}>
-              <div>
-                <label htmlFor="email">Email</label>
-                <input {...register('email')} id='email' type="email" />
-              </div>
-              <div>
-                <label htmlFor="password">Password</label>
-                <input {...register('password')} id='password' type="password" />
-              </div>
-              <button>Login</button>
-            </form>
-            <p>if you are not registered yet <Link to='/register'>Register you</Link></p>
-          </div>
-      }
-    </>
+    <div className="login-container">
+      {hasToken ? (
+        <button onClick={handleLogout}>Logout</button>
+      ) : (
+        <div>
+          <h2 className="login-title">Login</h2>
+          <form onSubmit={handleSubmit(submit)}>
+            <div>
+              <label htmlFor="email">Email</label>
+              <input {...register('email')} id='email' className='login-input' type="email" />
+            </div>
+            <div>
+              <label htmlFor="password">Password</label>
+              <input {...register('password')} id='password' className='login-input' type="password" />
+            </div>
+            <button className="login-button">Login</button>
+          </form>
+          <p className="login-link">If you are not registered yet <Link to='/register'>Register here</Link></p>
+        </div>
+      )}
+    </div>
   )
 }
+
 export default Login

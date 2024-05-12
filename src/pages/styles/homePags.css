@@ -12,7 +12,6 @@
 
 .homepage__filtername input {
     width: 600px;
-    min-width: 320px;
     height: 45px;
 }
 
@@ -68,3 +67,10 @@ content: 'Dark Mode';
 .dark .homepage__darkbtn::before{
     content: 'Light Mode';
 } */
+
+@media screen and (max-width: 768px) {
+    .homepage__filtername input {
+        width: 80%; /* Porcentaje o vw según sea necesario */
+        max-width: 100%;
+    }
+}
